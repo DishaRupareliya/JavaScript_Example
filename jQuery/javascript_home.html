@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+
+  <header>
+    <h1>A story about IT career.</h1>
+  </header>
+<nav id="main">
+    <ul>
+      <li class="logo"><a href="#">career.</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Images</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">login</a></li>
+    </ul>
+  </nav>
+
+  <div class="site-wrap">
+    <p>"Sometimes people think working at a nonprofit is all rainbows and butterflies and that’s not true. You have your good days and your bad days, just like any other industry. But when I’m able to positively influence the young women I come across in my work, that makes it all worth it."</p>
+    <p>"Don’t focus on money in the beginning; focus on figuring out what you love. When I started an anonymous diary I had no idea it would one day be paying my bills, but I always stayed true to what I loved to do, and eventually I was able to support myself with that."</p>
+    <p>"Let’s imagine you are having a bank account that is credited with $86, 400 every day at 12:00 am.<br><br>
+      Some of the conditions on this account are, you cannot carry forward any of the balance to the next day, it has to be used on that day only and whatever balances you have will expire exactly at 12:00 am.<br><br>
+      How will you react at that time?<br><br>
+      Use all the money purposefully or lavishly?<br><br>
+      Similar to this account we all have our own account called “Time account”. Each day we are credited with 86, 400 seconds and all of it expires at the end of the day.<br><br>
+      We cannot carry forward any of the unused time to the next day.<br><br>
+      So, it’s all in our hands to see how we can use it.<br><br>
+      “You may delay, but time will not.” – Benjamin Franklin......."</p>
+  </div>
+
+  <script>
+    const nav = document.querySelector('#main');
+    let topOfNav = nav.offsetTop;
+
+    function fixNav() {
+      if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      }else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+    }
+
+    window.addEventListener('scroll', fixNav);
+  </script>
+</body>
+</html>
